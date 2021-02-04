@@ -1,0 +1,795 @@
+{
+	"info": {
+		"_postman_id": "ef4a723e-fcb1-4686-b514-8daa8ef22060",
+		"name": "Jacuzzis",
+		"description": "API que contiene las siguientes funcionalidades\r\n\r\n1. Endpoints para autenticación y recuperación de contraseña usando Laravel Passport (Inicio de sesión mediante documento y clave)\r\n2. Endpoints para la consulta de preguntas, opciones de respuesta y registro de respuestas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Encuestas",
+			"item": [
+				{
+					"name": "Preguntas",
+					"item": [
+						{
+							"name": "Preguntas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/question",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"question"
+									]
+								},
+								"description": "Permite visualizar el listado de preguntas creadas"
+							},
+							"response": [
+								{
+									"name": "Listar Preguntas",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer 1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/question",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"question"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"data\": [\r\n        {\r\n            \"id\": 4,\r\n            \"name\": \"¿Cómo conoció a Jacuzzis.com?\",\r\n            \"id_surveys\": 2,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"name\": \"¿Conoce nuestros servicios?\",\r\n            \"id_surveys\": 2,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"A grandes rasgos, ¿ Cuán satisfecho está con los servicios de la empresa?\",\r\n            \"id_surveys\": 1,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:32.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:32.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"name\": \"Comparado con otros productos, los productos de nuestra empresa son:\",\r\n            \"id_surveys\": 1,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Elige entre las opciones de calidad, su opinion frente a los productos de la empresa\",\r\n            \"id_surveys\": 1,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        }\r\n    ]\r\n}"
+								}
+							]
+						},
+						{
+							"name": "Preguntas por Encuesta",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/question/survey/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"question",
+										"survey",
+										"1"
+									]
+								},
+								"description": "Permite visualizar el listado de preguntas creadas"
+							},
+							"response": [
+								{
+									"name": "Ver Preguntas por id Encuesta",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer 1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/question/survey/1",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"question",
+												"survey",
+												"1"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"A grandes rasgos, ¿ Cuán satisfecho está con los servicios de la empresa?\",\r\n            \"id_surveys\": 1,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:32.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:32.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Elige entre las opciones de calidad, su opinion frente a los productos de la empresa\",\r\n            \"id_surveys\": 1,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"name\": \"Comparado con otros productos, los productos de nuestra empresa son:\",\r\n            \"id_surveys\": 1,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        }\r\n    ]\r\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Respuestas",
+					"item": [
+						{
+							"name": "Respuestas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/answers",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"answers"
+									]
+								},
+								"description": "Permite visualizar el listado de posibles respuestas creadas"
+							},
+							"response": [
+								{
+									"name": "Listar Respuestas",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer 1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/answers",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"answers"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"data\": [\r\n        {\r\n            \"id\": 6,\r\n            \"name\": \"Buena calidad\",\r\n            \"id_questions\": 2,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"name\": \"Igual\",\r\n            \"id_questions\": 3,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 9,\r\n            \"name\": \"Mejor\",\r\n            \"id_questions\": 3,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 7,\r\n            \"name\": \"Peor\",\r\n            \"id_questions\": 3,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"name\": \"Muy baja calidad\",\r\n            \"id_questions\": 2,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"name\": \"Muy satisfecho\",\r\n            \"id_questions\": 1,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 14,\r\n            \"name\": \"No\",\r\n            \"id_questions\": 5,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"name\": \"Normal\",\r\n            \"id_questions\": 2,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 15,\r\n            \"name\": \"Nose\",\r\n            \"id_questions\": 5,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 11,\r\n            \"name\": \"Oficinas (Presencial)\",\r\n            \"id_questions\": 4,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 10,\r\n            \"name\": \"Pagina web\",\r\n            \"id_questions\": 4,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Satisfecho\",\r\n            \"id_questions\": 1,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 13,\r\n            \"name\": \"Si\",\r\n            \"id_questions\": 5,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Totalmente insastisfecho\",\r\n            \"id_questions\": 1,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:33.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:33.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 12,\r\n            \"name\": \"Un amigo\",\r\n            \"id_questions\": 4,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        }\r\n    ]\r\n}"
+								}
+							]
+						},
+						{
+							"name": "Respuestas por Preguntas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/answers/question/3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"answers",
+										"question",
+										"3"
+									]
+								},
+								"description": "Permite visualizar el listado de preguntas creadas"
+							},
+							"response": [
+								{
+									"name": "Ver Opciones de respuesta por id Pregunta",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer 1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/answers/question/3",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"answers",
+												"question",
+												"3"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"data\": [\r\n        {\r\n            \"id\": 7,\r\n            \"name\": \"Peor\",\r\n            \"id_questions\": 3,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"name\": \"Igual\",\r\n            \"id_questions\": 3,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 9,\r\n            \"name\": \"Peor\",\r\n            \"id_questions\": 3,\r\n            \"state\": 1,\r\n            \"created_at\": \"2020-11-04T13:21:34.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:34.000000Z\"\r\n        }\r\n    ]\r\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Encuestas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {  \r\n    \"useranswers\": [\r\n        {\r\n            \"id_user\": \"4\",\r\n            \"id_survey\": \"1\",\r\n            \"id_question\": \"2\",\r\n            \"id_answer\" : \"1\"\r\n        },\r\n        {\r\n            \"id_user\": \"4\",\r\n            \"id_survey\": \"1\",\r\n            \"id_question\": \"3\",\r\n            \"id_answer\" : \"3\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/surveys",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"surveys"
+							]
+						},
+						"description": "Permite visualizar el listado de encuestas creadas"
+					},
+					"response": [
+						{
+							"name": "Listar Encuestas",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 45|Yw6WKQz8AgZcPu6CU7578Un5JJ2KA1cRgaEjvs6U",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/surveys",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"surveys"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"status\": 200,\r\n    \"data\": [\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Datos Generales\",\r\n            \"state\": 1,\r\n            \"instructions\": \"La encuesta esta diseñada para no tomar más de 15 minutos\",\r\n            \"created_at\": \"2020-11-04T13:21:32.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:32.000000Z\"\r\n        },\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Encuesta de Satisfaccion\",\r\n            \"state\": 1,\r\n            \"instructions\": \"Debe seleccionar la respuesta que corresponda\",\r\n            \"created_at\": \"2020-11-04T13:21:32.000000Z\",\r\n            \"updated_at\": \"2020-11-04T13:21:32.000000Z\"\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Guardado_respuestas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {  \r\n    \"useranswers\": [\r\n        {\r\n            \"id_user\": \"1\",\r\n            \"id_survey\": \"2\",\r\n            \"id_question\": \"4\",\r\n            \"id_answer\" : \"10\"\r\n        },\r\n        {\r\n            \"id_user\": \"1\",\r\n            \"id_survey\": \"2\",\r\n            \"id_question\": \"5\",\r\n            \"id_answer\" : \"14\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/useranswers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"useranswers"
+							]
+						},
+						"description": "Guarda las respuestas de los usuarios a las encuestas"
+					},
+					"response": [
+						{
+							"name": "Guardado_respuestas",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 1|qHeIhDkhRgs7gb2fANagebDVn1w5J2ogoodM8OBG",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {  \r\n    \"useranswers\": [\r\n        {\r\n            \"id_user\": \"1\",\r\n            \"id_survey\": \"2\",\r\n            \"id_question\": \"4\",\r\n            \"id_answer\" : \"10\"\r\n        },\r\n        {\r\n            \"id_user\": \"1\",\r\n            \"id_survey\": \"2\",\r\n            \"id_question\": \"5\",\r\n            \"id_answer\" : \"14\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/useranswers",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"useranswers"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"status\": 200,\r\n    \"message\": \"Registros guardados con exito\"\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Autenticacion",
+			"item": [
+				{
+					"name": "Recuperar Contraseña",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"user-agent": true,
+							"host": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 26|603CCitbX9eqIodSO1WgPIuh4mbF2XcWclBmClq3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/atom+xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"email\" : \"ingadrianazunigac@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/forgot",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forgot"
+							]
+						},
+						"description": "Realiza el proceso de recuperacion de contraseña"
+					},
+					"response": [
+						{
+							"name": "Recuperar Contraseña",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 26|603CCitbX9eqIodSO1WgPIuh4mbF2XcWclBmClq3",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/atom+xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"email\" : \"ingadrianazunigac@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/password/email",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"password",
+										"email"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"success\": \"Correo de recuperacion enviado.\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Autenticacion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"document\" : \"1110486937\",\r\n   \"password\" : \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Endpoints para autenticación"
+					},
+					"response": [
+						{
+							"name": "Autenticacion",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"document\": \"1110486937\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{\r\n    \"access_token\": \"45|Yw6WKQz8AgZcPu6CU7578Un5JJ2KA1cRgaEjvs6U\",\r\n    \"token_type\": \"Bearer\"\r\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
