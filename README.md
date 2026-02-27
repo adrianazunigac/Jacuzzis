@@ -33,7 +33,7 @@ Laravel 8.12.3
 2. Renombrar archivo .env.example a .env
 3. Crear base de datos "jacuzzi"
 4. Ejecutar archivo jacuzzis/alistamiento.sh , este se encargará de instalar el composer y ejecutar las migraciones y correr el programa.
-5. Ingresar a http://127.0.0.1:8000 , credenciales = documento: 1110486937 y contraseña 123456789
+5. Ingresar a http://127.0.0.1:8000 , credenciales = documento: 123456789 y contraseña 123456789
 
 ### Monolito ⌨️
 
